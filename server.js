@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
   });
 })
 
-// Setting up another route
+// Setting up other routes
 app.get('/about', (req, res) => {
   // res.send('<H1>Hello Express!</H1>');
   res.render('about.hbs', {
@@ -72,6 +72,13 @@ app.get('/about', (req, res) => {
   });
 })
 
+
+app.get('/projects', (req, res) => {
+  // res.send('<H1>Hello Express!</H1>');
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+  });
+})
 
 app.get('/bad', (req, res) => {
     res.send({
